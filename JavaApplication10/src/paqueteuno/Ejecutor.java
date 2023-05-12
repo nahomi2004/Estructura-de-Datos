@@ -11,9 +11,9 @@ public class Ejecutor {
         
         arreglo1.llenarArreglo(x, n);
         arreglo1.presentarArreglo(x, n);
-        arreglo1.eliminarNum(x, n);
-        System.out.printf("%d ",arreglo1.busquedaArreglo(x,2));
-        arreglo1.presentarArreglo(x, n);
+        //arreglo1.eliminarNum(x, n);
+        // System.out.printf("%d ",arreglo1.busquedaArreglo(x,2));
+        // arreglo1.presentarArreglo(x, n);
         arreglo1.ordenarMayorArreglo(x, n);
         arreglo1.ordenarMenorArreglo(x, n);
     }

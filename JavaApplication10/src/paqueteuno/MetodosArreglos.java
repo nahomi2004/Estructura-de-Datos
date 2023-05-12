@@ -41,13 +41,12 @@ public class MetodosArreglos {
         System.out.println("¿Qué número desea eliminar?");
         int num = entrada.nextInt();
         int a = busquedaArreglo(x,num);
-        if (a==-1){
-            System.out.println("El número no se pudo eliminar o no se "
-                    + "encuentra en el arreglo");
-        } else {
+        if (a!=-1){
             recorrerIzquierda(x,n,a);
             System.out.println("El número se eliminó correctamente");
-            
+        } else {
+            System.out.println("El número no se pudo eliminar o no se "
+                    + "encuentra en el arreglo");
         }
     }
     
