@@ -9,6 +9,8 @@ public class Ejercicio2 {
                 
         Metodos arreglo = new Metodos();
         
+        System.out.println("FACTORIAL DE LOS NÚMEROS DEL ARREGLO");
+        
         arreglo.factorialArreglo();
         arreglo.presentarArreglo();
     }
