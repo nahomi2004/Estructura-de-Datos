@@ -6,82 +6,76 @@ public class MetodosArreglos {
     //Elabore un programa que permita realizar las operaciones básicas
     // (lectura, ordenamiento, búsqueda, eliminación y presentación)
     // sobre matrices unidimensionales.
+    
     Scanner entrada;
+    int[] miArreglo;
+    int ev;
     
-    public MetodosArreglos () {
-        this.entrada = new Scanner (System.in);
+    public MetodosArreglos(int _n) {
+        this.entrada = new Scanner(System.in);
+        this.miArreglo = new int[_n];
+        this.ev = 0;
     }
     
-    public int[] llenarArreglo(int []x, int n) {
-        for(int i=0;i<x.length;i++) {
-            System.out.println("Ingrese un número entero en el arreglo"
-                    + " en la posición:\n ["+i+"]");
-            x[i]=entrada.nextInt();
-            n++;
+    public int menu() {
+        System.out.println("¿QUÉ DESEA HACER CON SU ARREGLO?");
+        System.out.println("Llenar el arreglo [1]");
+        System.out.println("Ordenar el arreglo [2]");
+        System.out.println("Buscar un número en el arreglo [3]");
+        System.out.println("Eliminar un número en el arreglo [4]");
+        System.out.println("Presentar el arreglo [5]");
+        System.out.println("Salir [0]\n");
+        return entrada.nextInt();
+    }
+    
+    public void llenarArreglo() {
+        for (int i=0;i<miArreglo.length;i++) {
+            System.out.print("Ingrese un número en la posición ["+i+"]:");
+            miArreglo[i]=entrada.nextInt();
+            ev++;
         }
-        return x;
     }
     
-    public void presentarArreglo(int []x, int n) {
-        for(int i=0;i<n;i++) {
-            System.out.println("["+x[i]+"]");
+    public void presentarArreglo(int []x){
+        for (int i=0;i<ev;i++) {
+            System.out.println("["+i+"]: "+miArreglo[i]);
         }
     }
     
-    public int busquedaArreglo(int []x, int num) {
-        for(int i=0;i<x.length;i++) {
-            if(x[i]==num) {
+    public int[] ordenarArregloMayor() {
+        int aux;
+        for (int i=0;i<ev-1;i++) {
+            for (int j=i+1;j<ev;j++) {
+                if (miArreglo[j]>miArreglo[i]){
+                    aux = miArreglo[i];
+                    miArreglo[i] = miArreglo[j];
+                    miArreglo[j]=aux;
+                }    
+            }
+        }
+        return miArreglo;
+    }
+    
+    public int[] ordenarArregloMenor() {
+        int aux;
+        for (int i=0;i<ev-1;i++) {
+            for (int j=i+1;j<ev;j++) {
+                if (miArreglo[j]<miArreglo[i]){
+                    aux = miArreglo[i];
+                    miArreglo[i] = miArreglo[j];
+                    miArreglo[j]=aux;
+                }    
+            }
+        }
+        return miArreglo;
+    }
+    
+    public int buscarNumero(int _n) {
+        for (int i=0;i<ev-1;i++) {
+            if (miArreglo[i]==_n) {
                 return i;
             }
         }
         return -1;
-    }
-    
-    public void eliminarNum(int []x, int n) {
-        System.out.println("¿Qué número desea eliminar?");
-        int num = entrada.nextInt();
-        int a = busquedaArreglo(x,num);
-        if (a!=-1){
-            recorrerIzquierda(x,n,a);
-            System.out.println("El número se eliminó correctamente");
-        } else {
-            System.out.println("El número no se pudo eliminar o no se "
-                    + "encuentra en el arreglo");
-        }
-    }
-    
-    public void recorrerIzquierda(int []x, int n, int num) {
-        for(int i=num;i<n-1;i++) 
-            x[i]=x[i+1];
-        n--;
-        x[n]=0;
-    }
-    
-    public void ordenarMenorArreglo(int []x, int n) {
-        int aux;
-        for(int i=0;i<n-1;i++) {
-            for(int j=0;j<n;i++) {
-                if (x[i]>x[j]) {
-                    aux = x[i];
-                    x[i] = x[j];
-                    x[j] = aux;
-                }
-            }
-        }
-        presentarArreglo(x,n);
-    }
-    
-    public void ordenarMayorArreglo(int []x, int n) {
-        int aux;
-        for(int i=0;i<n-1;i++) {
-            for(int j=0;j<n;i++) {
-                if (x[i]<x[j]) {
-                    aux = x[i];
-                    x[i] = x[j];
-                    x[j] = aux;
-                }
-            }
-        }
-        presentarArreglo(x,n);
     }
 }
