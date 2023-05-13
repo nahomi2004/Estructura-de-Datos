@@ -7,7 +7,7 @@ public class Ejecutor {
     public static void main(String[] args) {
         
         Scanner entrada = new Scanner(System.in);
-        int n, opc, ordenar;
+        int n, opc, ordenar, num, encontrado;
         
         System.out.println("Tamaño del arreglo");
         n = entrada.nextInt();
@@ -45,8 +45,8 @@ public class Ejecutor {
                 case 3 -> {
                     if (arreglo.ev!=0) {
                         System.out.println("¿Qué número desea buscar?");
-                        int num = entrada.nextInt();
-                        int encontrado = arreglo.buscarNumero(num);
+                        num = entrada.nextInt();
+                        encontrado = arreglo.buscarNumero(num);
                         if (encontrado!=-1){
                             System.out.println("El número "+num+" se encuentra en"
                                     + " la posición "+encontrado+" :D\n");
@@ -60,10 +60,12 @@ public class Ejecutor {
                     }
                 }
                 case 4 -> {
-                    
+                    System.out.println("¿Qué número desea eliminar?");
+                    num = entrada.nextInt();
+                    arreglo.eliminarNumero(num);
                 }
                 case 5 -> {
-                    
+                    arreglo.presentarArreglo(arreglo.miArreglo);
                 }
                 default -> {
                     

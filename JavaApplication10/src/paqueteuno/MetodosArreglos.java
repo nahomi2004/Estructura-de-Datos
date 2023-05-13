@@ -71,11 +71,28 @@ public class MetodosArreglos {
     }
     
     public int buscarNumero(int _n) {
-        for (int i=0;i<ev-1;i++) {
+        for (int i=0;i<ev;i++) {
             if (miArreglo[i]==_n) {
                 return i;
             }
         }
         return -1;
+    }
+    
+    public int[] recorrerIzquierda(int _n) {
+        for (int i=_n;i<ev-1;i++) {
+            miArreglo[i]=miArreglo[i+1];
+        }
+        ev--;
+        return miArreglo;   
+    }
+    
+    public void eliminarNumero(int _n) {
+        if (buscarNumero(_n)!=-1) {
+            presentarArreglo(recorrerIzquierda(buscarNumero(_n)));
+            System.out.println("El número se eliminó satisfactoriamente");
+        } else {
+            System.out.println("El número no se pudo eliminar");
+        }
     }
 }
