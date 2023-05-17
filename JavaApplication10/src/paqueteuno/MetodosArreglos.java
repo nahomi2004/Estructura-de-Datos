@@ -55,6 +55,7 @@ public class MetodosArreglos {
         }
         return miArreglo;
     }
+    // Uso el int[] porque lo que voy a retornar es un arreglo
     
     public int[] ordenarArregloMenor() {
         int aux;

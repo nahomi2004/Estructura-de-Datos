@@ -22,7 +22,10 @@ public class Ejecutor {
                 }
                 case 2 -> {
                     if (arreglo.ev!=0) {
-                       System.out.println("Mayor a menor [1]");
+                        // Se ve si el número de elmentos válidos es mayor a
+                        // cero para poder ejecutar el programa cin que salte
+                        // error.
+                        System.out.println("Mayor a menor [1]");
                         System.out.println("Menor a mayor [2]\n");
                         ordenar = entrada.nextInt();
                         switch (ordenar) {
@@ -60,12 +63,22 @@ public class Ejecutor {
                     }
                 }
                 case 4 -> {
-                    System.out.println("¿Qué número desea eliminar?");
-                    num = entrada.nextInt();
-                    arreglo.eliminarNumero(num);
+                    if (arreglo.ev!=0) {
+                        System.out.println("¿Qué número desea eliminar?");
+                        num = entrada.nextInt();
+                        arreglo.eliminarNumero(num);
+                    } else {
+                        System.out.println("El arreglo no tiene elementos"
+                                + "válidos\n");
+                    }
                 }
                 case 5 -> {
-                    arreglo.presentarArreglo(arreglo.miArreglo);
+                    if (arreglo.ev!=0) {
+                        arreglo.presentarArreglo(arreglo.miArreglo);
+                    } else {
+                        System.out.println("El arreglo no tiene elementos"
+                                + "válidos\n");
+                    }                    
                 }
                 default -> {
                     
