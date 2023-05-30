@@ -2,15 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package piramide;
+package piramideinversa;
 
 /**
  *
  * @author D E L L
  */
 public class Metodos {
-    /*  Dada una matriz de tamaño NxN (impar), realice un método que me permita 
-        mostrar un cuadro de asteriscos (solo bordes) */
     
     String [][] matriz;
     
@@ -23,23 +21,16 @@ public class Metodos {
         int pi = n / 2;
         
         /*for (int x=0;x<=pi;x++) {
-            for (int i=0;i<n-x;i++) {
-                matriz [n-1][i] = "*";                
+            for (int i=x;i<n-x;i++) {
+                matriz [i][(n-1)-x] = "*";                
             }
-            n--;
-        }*/ //Esto imprime una escalera
-        
-        /* for (int x=0;x<=pi;x++) {
-            for (int i=0;i<n-x;i++) {
-                matriz [(n-1)-x][i] = "*";                
-            }
-        }*/ //Imprime una pendiente
+        }*/ // Esta si imprime la pirámide con la punta hacia la izquierda
         
         for (int x=0;x<=pi;x++) {
             for (int i=x;i<n-x;i++) {
-                matriz [(n-1)-x][i] = "*";                
+                matriz [x][i] = "*";                
             }
-        } // Esta si imprime la pirámide
+        } // Esta si imprime la pirámide inversa
         
         for (int i=0;i<matriz.length;i++) {
             for (int j=0;j<matriz.length;j++) {
@@ -48,8 +39,8 @@ public class Metodos {
             }
         }
         
-        /*for (int i = 0; i <= pi; i++) {
-            for (int j = 0; j < n; j++) {
+        /*for (int i=pi; i>=0; i--) {
+            for (int j=0; j<n; j++) {
                 if (j >= pi - i && j <= pi + i) {
                     System.out.print("* ");
                 } else {
