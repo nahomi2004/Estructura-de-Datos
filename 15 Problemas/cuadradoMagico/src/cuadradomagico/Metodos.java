@@ -18,7 +18,7 @@ public class Metodos {
         matriz[fila][columna] = 1;
 
         // Llenar el cuadrado mágico con los números restantes
-        for (int num = 2; num <= _n * _n; num++) {
+        for (int num=2; num<= _n*_n;num++) {
             fila--;
             columna++;
 
