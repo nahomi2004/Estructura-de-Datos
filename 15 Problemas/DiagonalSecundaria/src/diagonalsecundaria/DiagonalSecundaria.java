@@ -6,15 +6,8 @@ package diagonalsecundaria;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class DiagonalSecundaria {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
@@ -31,6 +24,5 @@ public class DiagonalSecundaria {
         matriz.presentarMatriz();
         System.out.println("Suma Diagonal Secundaria: "+matriz.sumaDiagonal());
         
-    }
-    
+    }    
 }

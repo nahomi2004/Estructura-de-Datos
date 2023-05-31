@@ -6,10 +6,6 @@ package javaapplication24;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Leer una matriz de n X m elementos y calcular la suma de cada una de sus 
         filas y columnas, dejando dichos resultados en dos vectores, uno de la 

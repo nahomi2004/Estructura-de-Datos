@@ -24,11 +24,11 @@ public class Ejercicio10 {
         int n;
         int opc;
         String id;        
-        
-        System.out.println("¿El avión está próximo a despegar?");
-        System.out.println("Sí [1]\tNo[2]");
-        n = entrada.nextInt();            
-        if (n==2) {
+            
+        do {
+            System.out.println("¿El avión está próximo a despegar?");
+            System.out.println("Sí [1]\tNo[2]");
+            n = entrada.nextInt();
             do {
                 opc = vuelo.menu();
                 switch (opc) {
@@ -68,10 +68,11 @@ public class Ejercicio10 {
                     }
                 }  
             } while (opc!=0);
-        } else {
-                System.out.println("El vuelo ya no está disponible\n"
+        } while (n==1);
+        if (n==1) {
+           System.out.println("El vuelo ya no está disponible\n"
                         + "Puede volver a nuestra página principal a revisar"
-                        + " próximos vuelos\nGRACIAS\n");
+                        + " próximos vuelos\nGRACIAS\n");           
         }
         
     }

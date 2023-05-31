@@ -6,10 +6,6 @@ package diagonalsecundaria;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Dado un arreglo de dos dimensiones de m x n elementos numéricos de tipo 
         entero, desarrollar un programa para sumar los elementos de la diagonal 

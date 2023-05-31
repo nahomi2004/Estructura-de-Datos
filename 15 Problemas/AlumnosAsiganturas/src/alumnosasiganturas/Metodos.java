@@ -6,10 +6,6 @@ package alumnosasiganturas;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Cada alumno de una clase de 20 estudiantes tiene notas correspondientes 
         a 5 asignaturas diferentes, pudiendo no tener calificación en alguna 

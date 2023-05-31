@@ -4,17 +4,8 @@
  */
 package alumnosasiganturas;
 
-import java.util.Scanner;
-
-/**
- *
- * @author D E L L
- */
 public class AlumnosAsiganturas {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         Metodos matriz = new Metodos();
@@ -36,6 +27,5 @@ public class AlumnosAsiganturas {
         
         System.out.println("Media de la Clase: "+matriz.mediaClase());
         System.out.println("Porcentaje de ceros: "+matriz.faltasExamen()+"%");
-    }
-    
+    }    
 }

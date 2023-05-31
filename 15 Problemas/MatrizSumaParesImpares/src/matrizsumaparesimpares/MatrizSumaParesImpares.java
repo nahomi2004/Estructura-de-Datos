@@ -6,10 +6,6 @@ package matrizsumaparesimpares;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class MatrizSumaParesImpares {
 
     /**
@@ -32,6 +28,5 @@ public class MatrizSumaParesImpares {
         System.out.println("MATRIZ ORIGINAL");
         matriz.presentarMatriz();
         System.out.printf("%s\n",matriz);
-    }
-    
+    }    
 }

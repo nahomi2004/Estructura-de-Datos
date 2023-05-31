@@ -6,10 +6,6 @@ package matrices;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     Scanner entrada;
     int [][] matriz;

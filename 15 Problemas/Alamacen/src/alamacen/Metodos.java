@@ -6,10 +6,6 @@ package alamacen;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Una empresa tiene diez almacenes y desea un programa que lea sus ventas 
         trimestrales y calcule:

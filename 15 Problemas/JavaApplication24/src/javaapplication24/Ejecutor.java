@@ -6,15 +6,8 @@ package javaapplication24;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Ejecutor {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         Scanner entrada = new Scanner (System.in);
@@ -37,6 +30,7 @@ public class Ejecutor {
             System.out.print("["+matriz.sumarFilas()[i]+"] ");
         }
         System.out.println("");
+        System.out.println("Suma de Columnas");
         for (int i=0;i<m;i++) {
             System.out.print("["+matriz.sumarColumnas(m)[i]+"] ");
         }

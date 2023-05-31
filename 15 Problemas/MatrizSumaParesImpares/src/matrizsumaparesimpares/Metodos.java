@@ -6,10 +6,6 @@ package matrizsumaparesimpares;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Dada una matriz L de n X m elementos, diseñar un programa que calcule la 
         suma de números pares e impares contenidos en ella */

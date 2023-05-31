@@ -24,7 +24,7 @@ public class Ejercicio11 {
         // además se debe cambiar en llenarArreglo el nextLine() por el next()
         
         System.out.println("Ingrese el ID del alumno que desea buscar:");        
-        id = entrada.nextLine();     
+        id = entrada.next();     
         arreglo.encontrarAlumno(id);
         
         arreglo.presentarArreglo();

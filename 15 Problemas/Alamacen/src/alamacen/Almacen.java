@@ -4,17 +4,8 @@
  */
 package alamacen;
 
-import java.util.Scanner;
-
-/**
- *
- * @author D E L L
- */
 public class Almacen {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
                 
         Metodos matriz = new Metodos();
@@ -42,6 +33,5 @@ public class Almacen {
         }
         
         System.out.println("El mes más productivo es: "+(matriz.mesMasProductivo()+1));
-    }
-    
+    }    
 }
