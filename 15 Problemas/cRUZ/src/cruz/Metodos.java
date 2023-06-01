@@ -4,10 +4,6 @@
  */
 package cruz;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Dada una matriz de tamaño NxN (impar), realice un método que me permita 
         mostrar una cruz de asteriscos */

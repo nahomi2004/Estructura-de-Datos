@@ -6,10 +6,6 @@ package matrizaleatoria;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     // Generar una matriz de N×N con números aleatorios sin repetirse.
     

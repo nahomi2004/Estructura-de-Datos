@@ -3,10 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package cuadradomagico;
-/**
- *
- * @author D E L L
- */
+
 public class Metodos {
     
     public int[][] crearCuadradoMagico(int _n) {

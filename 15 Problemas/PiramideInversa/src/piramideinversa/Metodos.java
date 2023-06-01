@@ -4,10 +4,6 @@
  */
 package piramideinversa;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     
     String [][] matriz;

@@ -6,15 +6,8 @@ package cruz;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class Cruz {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el número de filas y columnas (n): ");

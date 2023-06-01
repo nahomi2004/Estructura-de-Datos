@@ -6,10 +6,6 @@ package piramideinversa;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class PiramideInversa {
 
     /**

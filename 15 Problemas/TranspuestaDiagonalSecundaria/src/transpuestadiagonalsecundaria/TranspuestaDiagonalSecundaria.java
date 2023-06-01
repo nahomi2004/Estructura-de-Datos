@@ -6,10 +6,6 @@ package transpuestadiagonalsecundaria;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class TranspuestaDiagonalSecundaria {
 
     public static void main(String[] args) {

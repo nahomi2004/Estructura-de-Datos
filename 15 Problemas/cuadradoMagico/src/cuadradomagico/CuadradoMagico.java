@@ -6,15 +6,8 @@ package cuadradomagico;
 
 import java.util.Scanner;
 
-/**
- *
- * @author D E L L
- */
 public class CuadradoMagico {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         // Pedir al usuario el número de filas y columnas (N)

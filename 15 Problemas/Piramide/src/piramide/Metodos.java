@@ -4,10 +4,6 @@
  */
 package piramide;
 
-/**
- *
- * @author D E L L
- */
 public class Metodos {
     /*  Dada una matriz de tamaño NxN (impar), realice un método que me permita 
         mostrar un cuadro de asteriscos (solo bordes) */
