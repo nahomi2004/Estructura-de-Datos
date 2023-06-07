@@ -26,6 +26,7 @@ public class Metodos {
         System.out.println("Recorrer            [2]: ");
         System.out.println("Insertar al inicio  [3]: ");
         System.out.println("Insertar ordenado   [4]: ");
+        System.out.println("Eliminar            [5]: ");
         System.out.println("Salir               [0]:");
         return entrada.nextInt();         
     }
@@ -97,6 +98,38 @@ public class Metodos {
                         tail = nuevo;
                     }
                 }
+            }
+        }
+    }
+    
+    public void eliminar() {
+        int num;
+        System.out.print("Ingrese dato: ");
+        num = entrada.nextInt();
+        Nodo nuevo = new Nodo(num);
+        if (listaVacia()) {
+            head = nuevo;
+            tail = nuevo;
+        } else {
+            if (num==head.dato) {
+                if (head.sig==null) {
+                    tail=null;
+                }
+                head=head.sig;
+            } else {
+                Nodo actual = head;
+                while (actual.sig!=null && actual.sig.dato!=num) {
+                    actual=actual.sig;
+                }
+                if (actual.sig==tail) {
+                    tail = actual;
+                }
+                if (actual.sig!=null) {
+                    actual.sig = actual.sig.sig;
+                } else {
+                    System.out.println("No está :("); 
+                }
+                
             }
         }
     }

@@ -24,7 +24,11 @@ public class Listas {
                 case 2 -> mylista.recorrer();   
                 case 3 -> mylista.insInicio();
                 case 4 -> mylista.insOrdenado();
-                default ->{}
+                case 5 -> mylista.eliminar();
+                default -> {
+                    System.out.println("Adiós"); 
+                    op=0;
+                }
             }
             
         }while (op!=0);
