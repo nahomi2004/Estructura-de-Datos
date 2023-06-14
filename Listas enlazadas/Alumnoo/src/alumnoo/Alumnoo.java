@@ -21,10 +21,10 @@ public class Alumnoo {
             op=mylista.menu();
             switch (op){
                 case 1 -> mylista.insertar();
-                case 2 -> mylista.recorrer();   
-                case 3 -> mylista.insInicio();
-                case 4 -> mylista.insOrdenado();
-                case 5 -> mylista.eliminar();
+                case 2 -> mylista.eliminar();
+                case 3 -> mylista.reporteAprobadoSegunSexo('v');
+                case 4 -> mylista.reporteAprobadoSegunSexo('m');
+                case 5 -> mylista.listar();
                 default -> {
                     System.out.println("Adiós"); 
                     op=0;

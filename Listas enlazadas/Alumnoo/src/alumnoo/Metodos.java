@@ -21,12 +21,12 @@ public class Metodos {
     }
     
     public int menu (){
-        System.out.println("\nInsertar          [1]: ");
+        System.out.println("\nInsertar            [1]: ");
         System.out.println("Eliminar            [2]: ");
         System.out.println("Reporte varones     [3]: ");
         System.out.println("Reporte damas       [4]: ");
         System.out.println("Listar              [5]: ");
-        System.out.println("Salir               [0]:");
+        System.out.println("Salir               [0]: ");
         return entrada.nextInt();         
     }
     
@@ -38,16 +38,16 @@ public class Metodos {
     public AlumnoNodo leerDatos(){
         double [] calif = new double [3];
         
-        System.out.print("Ingrese nombre del estudiante: ");
-        String nombre = entrada.nextLine();
+        System.out.print("\nIngrese nombre del estudiante: ");
+        String nombre = entrada.next();
         System.out.print("Ingrese id del estudiante: ");
         int id = entrada.nextInt();
         entrada.nextLine();
-        System.out.println("Ingrese [s] si es una mujer o [v] si es varon");
+        System.out.println("Ingrese [m] si es una mujer o [v] si es varon");
         char sexo = entrada.nextLine().charAt(0);
         System.out.println("Ingrese las calificaciones");
         for (int i=0;i<calif.length;i++) {
-            System.out.println("Calificacion ["+i+"]");
+            System.out.println("Calificacion ["+(i+1)+"]");
             calif[i] = entrada.nextDouble();
         }     
         
@@ -82,82 +82,60 @@ public class Metodos {
     }
     
     
-    public void recorrer(){
-        AlumnoNodo actual=head;
-        while(actual!=null){
-            System.out.print(actual.dato+"->");
-            actual=actual.sig;  
-        }
-    }
-    
-    public void insInicio() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        AlumnoNodo nuevo = new AlumnoNodo(num);
+    public void listar(){
         if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
+            System.out.println("\nNo existen elementos");
         } else {
-            nuevo.sig = head;
-            head = nuevo;
-        }
-    }
-    
-    public void insOrdenado() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        AlumnoNodo nuevo = new AlumnoNodo(num);
-        if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
-        } else {
-            if (num<head.dato) {
-                nuevo.sig = head;
-                head = nuevo;
-            } else {
-                Nodo actual = head;
-                while (actual.sig!=null && num>actual.sig.dato) {
-                    actual = actual.sig;
-                    nuevo.sig = actual.sig;
-                    actual.sig = nuevo;
-                    if (nuevo.sig==null) {
-                        tail = nuevo;
-                    }
+            AlumnoNodo actual = head;
+            while (actual!=null) {
+                System.out.printf("\nID: %d\nNombre: %s\nSexo: %s\n",
+                        actual.id,actual.nombre,actual.sexo);
+                System.out.println("Calificaciones:");
+                for (int i=0;i<actual.calif.length;i++) {
+                    System.out.printf("Calificacion [%d]: %.2f\n", i+1 , actual.calif[i]);
                 }
+                System.out.println("Promedio: "+actual.Promedio());
             }
         }
     }
     
-    public void eliminar() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        AlumnoNodo nuevo = new AlumnoNodo(num);
-        if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
-        } else {
-            if (num==head.dato) {
-                if (head.sig==null) {
-                    tail=null;
+    public void reporteAprobadoSegunSexo (char x) {
+        AlumnoNodo actual = head;
+        while(actual!=null) {
+            if (actual.sexo==x) {
+                if (actual.Promedio()>=7) {
+                    System.out.printf("\nID: %d\nNombre: %s\nSexo: %s\n",
+                        actual.id,actual.nombre,actual.sexo);
+                    System.out.println("APROBADO");
+                } else {
+                    System.out.printf("\nID: %d\nNombre: %s\nSexo: %s\n",
+                        actual.id,actual.nombre,actual.sexo);
+                    System.out.println("REPROBADO");
                 }
-                head=head.sig;
+            }
+            actual=actual.sig;
+        }
+    }
+    
+    public void eliminar() {
+        System.out.println("Ingrese id del estudiante:");
+        int id = entrada.nextInt();
+        
+        if (listaVacia()) {
+            System.out.println("Lista Vacia...");
+        } else {
+            if (id == head.id) {
+                head = head.sig;
             } else {
                 AlumnoNodo actual = head;
-                while (actual.sig!=null && actual.sig.dato!=num) {
-                    actual=actual.sig;
+                while (actual.sig!=null && id==actual.id) {
+                    actual = actual.sig;
+                    if (actual.sig==null) {
+                        System.out.println("No existe");
+                    } else {
+                        actual.sig = actual.sig.sig;
+                    }
                 }
-                if (actual.sig==tail) {
-                    tail = actual;
-                }
-                if (actual.sig!=null) {
-                    actual.sig = actual.sig.sig;
-                } else {
-                    System.out.println("No está :("); 
-                }
-                
             }
         }
     }
