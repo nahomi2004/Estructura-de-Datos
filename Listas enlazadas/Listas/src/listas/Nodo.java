@@ -48,4 +48,8 @@ public class Nodo {
     Para insertar solo se ve si ant es null
     para insertar final  tail.sig = nuevo  nuevo.ant=tail  tail = nuevo
     para insertar en null seria head = nuevo  tail = nuevo
-    para insertar al principio nuevo.sig = head  head.ant = nuevo  head = nuevo*/
+    para insertar al principio nuevo.sig = head  head.ant = nuevo  head = nuevo
+
+    act.sig = act.sig.sig
+    act.sig.ant = act.sig.ant.ant
+    act = act.sig.ant.ant*/
