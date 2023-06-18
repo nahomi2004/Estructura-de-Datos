@@ -6,15 +6,20 @@ package alumnoo;
 
 /**
  *
- * @author UTPL
+ * @author Nahomi Cabrera
  */
 public class AlumnoNodo extends Persona {
-    double [] calif;
+    private double [] calif;
     AlumnoNodo sig;
 
     public AlumnoNodo(int i, String n, char se,double[] c) {
         super(i,n,se);
         this.calif = c;
+        this.sig = null;
+    }
+    
+    public AlumnoNodo(int i, String n, char se) {
+        super(i,n,se);
         this.sig = null;
     }
     
@@ -24,5 +29,13 @@ public class AlumnoNodo extends Persona {
             suma+=nota;
         }
         return suma/3;
+    }
+
+    public double[] getCalif() {
+        return calif;
+    }
+
+    public void setCalif(double[] calif) {
+        this.calif = calif;
     }
 }

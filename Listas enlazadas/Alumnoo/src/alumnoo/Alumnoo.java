@@ -6,13 +6,10 @@ package alumnoo;
 
 /**
  *
- * @author UTPL
+ * @author Nahomi Cabrera
  */
 public class Alumnoo {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         int op;
         Metodos mylista=new Metodos();
@@ -32,6 +29,5 @@ public class Alumnoo {
             }
             
         }while (op!=0);
-    }
-    
+    }    
 }

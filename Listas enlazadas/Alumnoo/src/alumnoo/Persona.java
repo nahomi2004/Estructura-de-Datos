@@ -6,12 +6,12 @@ package alumnoo;
 
 /**
  *
- * @author UTPL
+ * @author Nahomi Cabrera
  */
 public class Persona {
-    int id;
-    String nombre;
-    char sexo;
+    protected int id;
+    protected String nombre;
+    protected char sexo;
 
     public Persona(int i, String n, char s) {
         id = i;
