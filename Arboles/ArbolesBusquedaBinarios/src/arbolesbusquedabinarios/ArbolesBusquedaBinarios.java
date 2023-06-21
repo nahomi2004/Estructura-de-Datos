@@ -14,24 +14,32 @@ public class ArbolesBusquedaBinarios {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int op;
+        int op, num;
         MetodosABB myArbol = new MetodosABB();
         do {
             op = myArbol.menu();
             switch (op) {
                 case 1 -> {
-                    myArbol.insertar();
+                    System.out.print("Ingrese un numero: ");
+                    num = myArbol.entrada.nextInt();
+                    myArbol.raiz=myArbol.insertar(num, myArbol.raiz);
                 }
                 case 2 -> {
-                    myArbol.preOrden();
-                    myArbol.posOrden();
-                    myArbol.inOrden();
+                    System.out.println("");
+                    System.out.println("PreOrden:");
+                    myArbol.preOrden(myArbol.raiz);
+                    System.out.println("");
+                    System.out.println("PosOrden:");
+                    myArbol.posOrden(myArbol.raiz);
+                    System.out.println("");
+                    System.out.println("InOrden:");
+                    myArbol.inOrden(myArbol.raiz);
+                    System.out.println("");
                 }
                 default -> {
                         
                 }
             }
         } while (op!=0);
-    }
-    
+    }    
 }

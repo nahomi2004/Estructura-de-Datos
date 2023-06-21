@@ -22,30 +22,52 @@ public class MetodosABB {
     public int menu() {
         System.out.println("");
         System.out.println("MENU PRINCIPAL");
-        System.out.println("Push                [1]");
-        System.out.println("Pop                 [2]");
-        System.out.println("Ppresentar lista    [3]");
+        System.out.println("Insertar            [1]");
+        System.out.println("Presentar           [2]");
+        System.out.println("Eliminar            [3]");
         System.out.println("Salir               [0]");
         return entrada.nextInt();
     }
     
-    public boolean arbolVacio(){
-        return (raiz==null);
+    public boolean arbolVacio(Nodo actual){
+        return (actual==null);
     }
     
-    public void insertar() {
-        
+    public Nodo insertar(int num, Nodo actual) {
+        if (arbolVacio(actual)) {
+            Nodo nuevo = new Nodo(num);
+            return nuevo;
+        } else {
+            if (num>actual.dato) {
+                actual.der = insertar(num, actual.der);
+            } else {
+                actual.izq = insertar(num, actual.izq);
+            }
+        }
+        return actual;
     }
     
-    public void preOrden() {
-        
+    public void preOrden(Nodo actual) {
+        if (actual!=null) {
+            System.out.print(actual.dato+" ");
+            preOrden(actual.izq);
+            preOrden(actual.der);
+        }
     }
     
-    public void posOrden() {
-        
+    public void posOrden(Nodo actual) {
+        if (actual!=null) {
+            posOrden(actual.izq);
+            posOrden(actual.der);
+            System.out.print(actual.dato+" ");
+        }
     }
     
-    public void inOrden() {
-        
+    public void inOrden(Nodo actual) {
+        if (actual!=null) {            
+            inOrden(actual.izq);
+            System.out.print(actual.dato+" ");
+            inOrden(actual.der);
+        }
     }
 }
