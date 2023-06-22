@@ -15,7 +15,7 @@ public class Alumnoo {
         Metodos mylista=new Metodos();
         
         do{
-            op=mylista.menu();
+            op = mylista.menu();
             switch (op){
                 case 1 -> mylista.insertar();
                 case 2 -> mylista.eliminar();

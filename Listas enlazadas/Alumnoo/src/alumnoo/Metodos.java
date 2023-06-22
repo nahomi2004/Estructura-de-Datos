@@ -21,8 +21,9 @@ public class Metodos {
     }
     
     public int menu (){
-        System.out.println("            MENU");
-        System.out.println("\nInsertar            [1]: ");
+        System.out.println("");
+        System.out.println("          MENU");
+        System.out.println("Insertar            [1]: ");
         System.out.println("Eliminar            [2]: ");
         System.out.println("Reporte varones     [3]: ");
         System.out.println("Reporte damas       [4]: ");
@@ -46,15 +47,16 @@ public class Metodos {
                 
         System.out.print("\nIngrese nombre del estudiante: ");
         String nombre = entrada.next();
+        entrada.nextLine();
         System.out.print("Ingrese id del estudiante: ");
         int id = entrada.nextInt();
         AlumnoNodo aux = comprobrarID(id);
         if (aux!=null) {
-            System.out.printf("\nEste ID ya está ingresado, el estudiante "
+            System.err.println("No se pudo crear al estudiante...");
+            System.out.println("");
+            System.out.printf("Este ID ya está ingresado, el estudiante "
                     + "perteneciente al él es:\nNombre: [%s]\nID: [%d]\nSexo: [%s]\n",
                     aux.nombre, aux.id, aux.sexo);
-            System.err.println("No se pudo crear al estudiante...");
-            
             return nuevo;
         } else {
             entrada.nextLine();
@@ -64,13 +66,13 @@ public class Metodos {
             if (sexo=='m' || sexo=='v') {
                 System.out.println("Ingrese las calificaciones");
                 for (int i=0;i<calif.length;i++) {
-                    System.out.print("Calificacion ["+(i+1)+"]:");
+                    System.out.print("Calificacion ["+(i+1)+"]: ");
                     calif[i] = entrada.nextDouble();
                 }
                 
                 nuevo = new AlumnoNodo(id,nombre,sexo,calif);
             } else {
-                System.err.println("Ingrese 'v' o 'm', por favor.\nInténtelo de nuevo");
+                System.err.println("Ingrese 'v' o 'm', por favor. Inténtelo de nuevo");
             }
         }        
         return nuevo;
@@ -83,7 +85,9 @@ public class Metodos {
     public void insertar(){
         AlumnoNodo nuevo = leerDatos();
         if (nuevo==null) {
+            System.out.println("");
             System.err.println("No se puede ingresar al alumno D:");
+            System.out.println("");
         } else {
             if (listaVacia()) {
             head = nuevo;
@@ -111,7 +115,8 @@ public class Metodos {
     // se procede a mostar el/los elemento/s que hay en ella.
     public void listar(){
         if (listaVacia()) {
-            System.err.println("\nNo existen elementos");
+            System.out.println("");
+            System.err.println("No existen elementos");
         } else {
             AlumnoNodo actual = head;
             while (actual!=null) {
@@ -136,6 +141,7 @@ public class Metodos {
     public void reporteAprobadoSegunSexo (char x) {
         AlumnoNodo actual = head;        
         if (listaVacia() || listaVaciaGenero(x)!=1) {
+            System.out.println("");
             System.err.println("Lista Vacia...");
         } else {
             while(actual!=null) {
@@ -166,19 +172,22 @@ public class Metodos {
         int id = entrada.nextInt();
         
         if (listaVacia()) {
+            System.out.println("");
             System.err.println("Lista Vacia...");
         } else {
             if (id == head.id) {
                 head = head.sig;
+                System.out.println("Eliminado correctamente");
             } else {
                 AlumnoNodo actual = head;
-                while (actual.sig!=null && id==actual.id) {
+                while (actual.sig!=null && actual.sig.id!=id)
                     actual = actual.sig;
-                    if (actual.sig==null) {
-                        System.err.println("No existe");
-                    } else {
-                        actual.sig = actual.sig.sig;
-                    }
+                
+                if (actual.sig!=null) {
+                    System.out.println("Eliminado correctamente");
+                    actual.sig = actual.sig.sig;                    
+                } else {
+                    System.err.println("No existe");               
                 }
             }
         }

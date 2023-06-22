@@ -17,7 +17,8 @@ public class AlumnoNodo extends Persona {
         this.calif = c;
         this.sig = null;
     }
-    
+    // Este constructor se usa para poder crear y devolver un alumno.
+    // Es algo básico pero que me sirvió para la función comprobar ID.
     public AlumnoNodo(int i, String n, char se) {
         super(i,n,se);
         this.sig = null;
