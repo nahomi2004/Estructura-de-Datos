@@ -36,6 +36,11 @@ public class ArbolesBusquedaBinarios {
                     myArbol.inOrden(myArbol.raiz);
                     System.out.println("");
                 }
+                case 3 -> {
+                    System.out.print("Ingrese un numero: ");
+                    num = myArbol.entrada.nextInt();
+                    myArbol.raiz=myArbol.eliminar(num, myArbol.raiz);
+                }
                 default -> {
                         
                 }

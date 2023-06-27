@@ -70,4 +70,41 @@ public class MetodosABB {
             inOrden(actual.der);
         }
     }
+    
+    public Nodo eliminar (int num, Nodo actual){
+        if (arbolVacio(actual)) {
+            System.out.println("No existe el elemento...");
+        } else if (num> actual.dato){
+            actual.der = eliminar(num,actual.der);
+        } else if (num < actual.dato){
+            actual.izq = eliminar(num,actual.izq);
+        } else {
+            Nodo aux = actual;
+            if(aux.izq==null) {
+                return aux.der;
+            } else if (aux.der==null) {
+                return aux.izq;
+            } else {
+                aux.dato = reemplazar(aux);
+            }
+        }
+        return actual;
+    }
+    
+    public int reemplazar(Nodo actual) {
+        Nodo a = actual.izq;
+        Nodo p = actual;
+        int valor;
+        while (a.der!=null) {
+            p=a;
+            a=a.der;
+        }
+        valor=a.dato;
+        if (p==actual){
+            p.izq=a.izq;
+        } else {
+            p.der=a.izq;
+        }
+        return valor;
+    }
 }
