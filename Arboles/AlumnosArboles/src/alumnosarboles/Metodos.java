@@ -121,7 +121,7 @@ public class Metodos {
             while (actual!=null) {
                 System.out.printf("ID: %d - Nombre: %s - Sexo: %s\n",
                         actual.id,actual.nombre,actual.sexo);
-                System.out.println("             ↓");
+                System.out.println("             v");
                 actual=actual.sig;
             }
             System.out.println("           null");
@@ -132,10 +132,10 @@ public class Metodos {
         if (arbolVacio(actual)) {
             return nuevo;
         } else {
-            if (nuevo.id>actual.id) {
-                raizMujeres = insertar(actual.der, nuevo);
+            if (nuevo.id > actual.id) {
+                actual.der = insertar(actual.der, nuevo);
             } else {
-                raizVarones = insertar(actual.izq, nuevo);
+                actual.izq = insertar(actual.izq, nuevo);
             }
         }
         return actual;
@@ -158,8 +158,8 @@ public class Metodos {
     public void inOrden(AlumnoArbol actual) {
         if (actual!=null) {            
             inOrden(actual.izq);
-            System.out.print("Nombre: "+actual.nombre+" - Id: "+actual.id+" - Sexo: "+actual.sexo);
-            System.out.println("           \n↓");
+            System.out.println("Nombre: "+actual.nombre+" - Id: "+actual.id+" - Sexo: "+actual.sexo);
+            System.out.println("           v");
             inOrden(actual.der);
         }
     }
@@ -167,9 +167,7 @@ public class Metodos {
     public void reporteInOrdenAprobados(AlumnoArbol actual) {
         if (actual!=null && actual.id>=7) {            
             inOrden(actual.izq);            
-            System.out.print("Nombre: "+actual.nombre+" - Id: "+actual.id+" - Sexo: "+actual.sexo);
-            System.out.println("Promedio: "+actual.promedio);
-            System.out.println("             ↓");                      
+            System.out.println("Nombre: "+actual.nombre+" - Id: "+actual.id+" - Sexo: "+actual.sexo+" - Promedio: "+actual.promedio);
             inOrden(actual.der);
         }
     }
@@ -177,9 +175,7 @@ public class Metodos {
     public void reporteInOrdenReprobados(AlumnoArbol actual) {
         if (actual!=null && actual.id<=7) {            
             inOrden(actual.izq);
-            System.out.print("Nombre: "+actual.nombre+" - Id: "+actual.id+" - Sexo: "+actual.sexo);
-            System.out.println("Promedio: "+actual.promedio);
-            System.out.println("             ↓");                      
+            System.out.println("Nombre: "+actual.nombre+" - Id: "+actual.id+" - Sexo: "+actual.sexo+" - Promedio: "+actual.promedio);
             inOrden(actual.der);
         }
     }

@@ -34,6 +34,7 @@ public class AlumnosArboles {
                         System.out.println("");
                     } else {
                         obj.inOrden(obj.raizMujeres);
+                        System.out.println("              null");
                         System.out.println("");
                     }                    
                 }
@@ -43,6 +44,7 @@ public class AlumnosArboles {
                         System.out.println("");
                     } else {
                         obj.inOrden(obj.raizVarones);
+                        System.out.println("              null");
                         System.out.println("");
                     }                    
                 }
@@ -53,6 +55,7 @@ public class AlumnosArboles {
                     } else {
                         System.out.println("APROBADAS");
                         obj.reporteInOrdenAprobados(obj.raizMujeres);
+                        System.out.println("              null");
                         System.out.println("");
                     }   
                 }
@@ -63,6 +66,7 @@ public class AlumnosArboles {
                     } else {
                         System.out.println("REPROBADAS");
                         obj.reporteInOrdenReprobados(obj.raizMujeres);
+                        System.out.println("              null");
                         System.out.println("");
                     }  
                 }
@@ -74,6 +78,7 @@ public class AlumnosArboles {
                         System.out.println("APROBADOS");
                         obj.reporteInOrdenAprobados(obj.raizVarones);
                         System.out.println("");
+                        System.out.println("");
                     }  
                 }
                 case 9 -> {
@@ -81,8 +86,9 @@ public class AlumnosArboles {
                         System.err.println("Arbol vacio");
                         System.out.println("");
                     } else {
-                        System.out.println("REPROBADAS");
+                        System.out.println("REPROBADOS");
                         obj.reporteInOrdenReprobados(obj.raizVarones);
+                        System.out.println("              null");
                         System.out.println("");
                     }
                 }
