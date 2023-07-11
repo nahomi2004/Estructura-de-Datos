@@ -86,7 +86,12 @@ public class MetodosAVL {
     }
 
     public Nodo rotarII(Nodo actual, Nodo nodoX) {
+        actual.izq = nodoX.der;
+        nodoX.der = actual;  
         
+        actual.fe = nodoX.fe = 0;
+        
+        return nodoX;
     }
     
     public Nodo rotarID(Nodo actual, Nodo nodoX) {
@@ -94,7 +99,12 @@ public class MetodosAVL {
     }
     
     public Nodo rotarDD(Nodo actual, Nodo nodoX) {
+        actual.der = nodoX.izq;
+        nodoX.izq = actual;  
         
+        actual.fe = nodoX.fe = 0;
+        
+        return nodoX;
     }
     
     public Nodo rotarDI(Nodo actual, Nodo nodoX) {
