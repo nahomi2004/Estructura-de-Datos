@@ -23,25 +23,26 @@ public class ArbolesAVL {
                 case 1 -> {
                     System.out.print("Ingrese un numero: ");
                     num = myArbol.entrada.nextInt();
-                    myArbol.raiz = myArbol.insertar(num, myArbol.raiz);
+                    myArbol.raiz = myArbol.insertarAVL(num, myArbol.raiz);
                 }
                 case 2 -> {
-                    System.out.println("");
-                    System.out.println("PreOrden:");
-                    myArbol.preOrden(myArbol.raiz);
-                    System.out.println("");
-                    System.out.println("PosOrden:");
-                    myArbol.posOrden(myArbol.raiz);
+                    //System.out.println("");
+                    //System.out.println("PreOrden:");
+                    //myArbol.preOrden(myArbol.raiz);
+                    //System.out.println("");
+                    //System.out.println("PosOrden:");
+                    //myArbol.posOrden(myArbol.raiz);
                     System.out.println("");
                     System.out.println("InOrden:");
                     myArbol.inOrden(myArbol.raiz);
+                    System.out.print("uwu");
                     System.out.println("");
                 }
-                case 3 -> {
+                /*case 3 -> {
                     System.out.print("Ingrese un numero: ");
                     num = myArbol.entrada.nextInt();
                     myArbol.eliminar(num, myArbol.raiz);
-                }
+                }*/
                 default -> {
 
                 }

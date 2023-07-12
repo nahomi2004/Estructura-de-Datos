@@ -95,7 +95,17 @@ public class MetodosAVL {
     }
     
     public Nodo rotarID(Nodo actual, Nodo nodoX) {
+        Nodo aux = nodoX.der;
         
+        actual.izq = aux.der;
+        nodoX.der = aux.izq; 
+        
+        aux.izq = nodoX;
+        aux.der = actual; 
+        
+        actual.fe = nodoX.fe = 0;
+        
+        return aux;
     }
     
     public Nodo rotarDD(Nodo actual, Nodo nodoX) {
@@ -108,6 +118,44 @@ public class MetodosAVL {
     }
     
     public Nodo rotarDI(Nodo actual, Nodo nodoX) {
+        Nodo aux = nodoX.izq;
         
+        actual.der = aux.izq;
+        nodoX.izq = aux.der; 
+        
+        aux.der = nodoX;
+        aux.izq = actual; 
+        
+        actual.fe = nodoX.fe = 0;
+        
+        return aux;
+    }
+    
+    /*public Nodo eliminar (int num, Nodo actual){
+        
+    }*/
+    
+    public void preOrden(Nodo actual) {
+        if (actual!=null) {
+            System.out.print(actual.dato+" ");
+            preOrden(actual.izq);
+            preOrden(actual.der);
+        }
+    }
+    
+    public void posOrden(Nodo actual) {
+        if (actual!=null) {
+            posOrden(actual.izq);
+            posOrden(actual.der);
+            System.out.print(actual.dato+" ");
+        }
+    }
+    
+    public void inOrden(Nodo actual) {
+        if (actual!=null) {            
+            inOrden(actual.izq);
+            System.out.printf("%d [%d] - ",actual.dato, actual.fe);
+            inOrden(actual.der);
+        }
     }
 }
