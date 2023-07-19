@@ -16,7 +16,27 @@ public class Ejercicio4 {
         devuelva otra lista con todos los elementos de las dos listas 
         originales y ordenada también de menor a mayor (no incluir
         elementos repetidos).
-        */
-        
-    }    
+         */
+        int op;
+        Metodos mylista = new Metodos();
+        mylista.menu();
+        do {
+            op = mylista.menu();
+            switch (op) {
+                case 1 ->
+                    mylista.insOrdenado(mylista.head);
+                case 2 ->
+                    mylista.insOrdenado(mylista.head2);
+                case 3 ->
+                    mylista.recorrer(mylista.head);
+                case 4 ->
+                    mylista.recorrer(mylista.head2);
+                default -> {
+                    System.out.println("Adiós");
+                    op = 0;
+                }
+            }
+
+        } while (op != 0);
+    }
 }

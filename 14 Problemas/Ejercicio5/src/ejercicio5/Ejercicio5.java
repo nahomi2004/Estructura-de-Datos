@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio1;
+package ejercicio5;
 
 /**
  *
  * @author D E L L
  */
-public class Ejercicio1 {
+public class Ejercicio5 {
 
     public static void main(String[] args) {
         /*
-        Crear una función que permita insertar un elemento inmediatamente 
-        después de un número dado que se encuentre en la lista.
+        Escribe una función que dada una lista L devuelva otra lista R 
+        conteniendo los elementos repetidos de L. Por ejemplo, si L almacena 
+        los valores 5, 2, 7, 2, 5, 5, 1, debe construirse una lista R con los
+        valores 5, 2. Si en L no hay elementos repetidos, R será la lista vacía.
         */
         Metodos metodos = new Metodos();
         System.out.println("Cuántos números quiere ingresar");
@@ -23,16 +25,15 @@ public class Ejercicio1 {
             metodos.insertar();
         }
         
-        System.out.println("Número de la lista");
-        int num2 = metodos.entrada.nextInt();
-        System.out.println("Número que quiere ingresar");
-        int num3 = metodos.entrada.nextInt();
+        metodos.crearLista();
+        
         System.out.println("LISTA UNO");
-        metodos.recorrer();        
+        metodos.recorrer(metodos.head);
         System.out.println("null");
-        metodos.insertarNum(num2, num3);
+        
+        System.out.println("");
         System.out.println("LISTA DOS");
-        metodos.recorrer();
+        metodos.recorrer(metodos.head2);
         System.out.println("null");
     }    
 }

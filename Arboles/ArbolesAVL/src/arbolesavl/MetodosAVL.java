@@ -94,6 +94,7 @@ public class MetodosAVL {
         return nodoX;
     }
     
+    
     public Nodo rotarID(Nodo actual, Nodo nodoX) {
         Nodo aux = nodoX.der;
         
