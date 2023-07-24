@@ -61,6 +61,20 @@ public class Metodos {
             actual = actual.sig;
         }
     }
+    
+    /*
+    public void recorrer(Nodo aux) {
+        Nodo actual = aux;
+        if (listaVacia()) {
+            System.err.println("Lista vacía");
+        } else {
+            while (actual != null) {
+                System.out.print(actual.dato + " -> ");
+                actual = actual.sig;
+            }
+        }        
+    }
+    */
 
     /*public void insInicio() {
         int num;

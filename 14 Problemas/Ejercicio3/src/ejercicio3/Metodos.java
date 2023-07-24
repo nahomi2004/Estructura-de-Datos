@@ -60,6 +60,20 @@ public class Metodos {
             actual = actual.sig;
         }
     }
+    
+    /*
+    public void recorrer(Nodo aux) {
+        Nodo actual = aux;
+        if (listaVacia()) {
+            System.err.println("Lista vacía");
+        } else {
+            while (actual != null) {
+                System.out.print(actual.dato + " -> ");
+                actual = actual.sig;
+            }
+        }        
+    }
+    */
 
     /*public void insInicio() {
         int num;
@@ -104,7 +118,7 @@ public class Metodos {
         Nodo actual = head;
         int aux = actual.dato;
         while (actual.sig != null) {
-            if (actual.dato < actual.sig.dato) {
+            if (aux < actual.sig.dato) {
                 aux = actual.sig.dato;
             }
             actual = actual.sig;
@@ -119,8 +133,7 @@ public class Metodos {
         Nodo nuevo = new Nodo(num);
 
         if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
+            System.err.println("No hay nada que eliminar");
         } else {
             if (num == head.dato) {
                 if (head.sig == null) {
@@ -138,10 +151,11 @@ public class Metodos {
                 if (actual.sig != null) {
                     actual.sig = actual.sig.sig;
                 } else {
-                    System.out.println("No está :(");
+                    System.err.println("No está :(");
                 }
 
             }
         }
+        System.out.println("Eliminado correctamente");
     }
 }

@@ -14,7 +14,7 @@ public class Ejercicio3 {
         /*
         Implemente una función que para una lista dada, elimine el nodo que 
         tenga el valor mayor.
-         */
+        */
 
         int op;
         Metodos mylista = new Metodos();
@@ -26,7 +26,7 @@ public class Ejercicio3 {
                     mylista.insertar();
                 case 2 -> {
                     mylista.recorrer();
-                    System.out.println(" null");
+                    System.out.println("null");
                 }
                 case 3 ->
                     mylista.eliminar();

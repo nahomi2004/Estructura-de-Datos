@@ -14,7 +14,7 @@ public class Ejercicio2 {
         /*
         Crear una función que permita calcular el promedio de los elementos de 
         una lista ya creada.
-         */
+        */
         Metodos opc = new Metodos();
 
         for (int i = 0; i < 10; i++) {
