@@ -2,18 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio10;
+package ejercicio13;
 
 /**
  *
  * @author D E L L
  */
-public class Ejercicio10 {
+public class Ejercicio13 {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         /*
-        Diseñar un algoritmo que permita ordenar una lista lineal sencilla 
-        utilizando el método burbuja.
+        Diseñar un algoritmo que permita eliminar todos los elementos repetidos 
+        en una lista lineal sencilla.
         */
         
         Metodos m = new Metodos();
@@ -28,11 +31,10 @@ public class Ejercicio10 {
                     System.out.println("null");
                 }
                 case 3 -> {
-                    m.ordenar();
-                    m.recorrer();
-                    System.out.println("null");
+                    m.eliminar();
                 }
             }
         } while (op!=0);
-    }    
+    }
+    
 }

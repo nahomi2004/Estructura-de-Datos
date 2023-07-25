@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ejercicio10;
+package ejercicio11;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -23,14 +23,14 @@ public class Metodos {
         this.cont = 0;
     }
 
-    public int menu (){
-        System.out.println("\nInsertar            [1]: ");
-        System.out.println("Recorrer            [2]: ");
-        System.out.println("Ordenar             [3]: ");
-        System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
+    public int menu() {
+        System.out.println("\nInsertar                                       [1]: ");
+        System.out.println("Recorrer                                       [2]: ");
+        System.out.println("Eliminar a partir de la posición del nodo dado [3]: ");
+        System.out.println("Salir                                          [0]:");
+        return entrada.nextInt();
     }
-    
+
     public boolean listaVacia() {
         return (head == null);
     }
@@ -49,6 +49,7 @@ public class Metodos {
                 actual = actual.sig;
             }
             actual.sig = nuevo;
+            nuevo.ant = actual;
             cont++;
         }
     }
@@ -62,10 +63,44 @@ public class Metodos {
                 System.out.print(actual.dato + " -> ");
                 actual = actual.sig;
             }
-        }        
+        }
     }
 
-    public void ordenar() {
+    public void eliminar() {
+        System.out.println("Ingrese la posición:");
+        int pos = entrada.nextInt();
+        
+        int c = 0;
+        
+        if (pos>cont) {
+            System.out.println("No hay como eliminar porque esa posición no existe");
+            return;
+        }
+
+        if (listaVacia()) {
+            System.out.println("");
+            System.err.println("Lista Vacia...");
+        } else {
+            Nodo actual = head;
+            while (c != pos) {
+                actual = actual.sig;
+                c++;
+            }
+            
+            if (c == 0) {
+                head.sig = null;
+                head = null;
+            } else {
+                actual = actual.ant;
+                actual.sig = null;
+                actual = null;
+            }
+            
+            System.out.println("Nodo eliminados correctamente :D");
+        }
+    }
+
+    /*public void ordenar() {
         Nodo actual = head;
         Nodo puntero = head.sig;
         
@@ -89,9 +124,9 @@ public class Metodos {
                 min.dato = temp;
             }
         }
-    }
+    }*/
 
-    /*public double promedio() {
+ /*public double promedio() {
         double promedio=0;
         Nodo actual = head;
         while (actual != null) {

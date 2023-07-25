@@ -72,21 +72,23 @@ public class Metodos {
     }
     
     public void listaInvertida() {
-        Nodo actual = tail;
         
         if (listaVacia()) {
             System.err.println("Lista vacía");
         } else {
-                        
-            Nodo aux = tail;            
-            tail = head;
-            head = aux;            
-                        
-            while (actual != null) {  
-                actual.sig = actual.ant;                
-                actual = actual.ant;    
+            Nodo actual = head;
+            Nodo auxAnterior = null;
+            Nodo auxSiguiente;
+
+            while (actual != null) {
+                auxSiguiente = actual.sig;  
+                actual.sig = auxAnterior;   
+                auxAnterior = actual;       
+                actual = auxSiguiente;      
             }
-        }  
+            tail = head;
+            head = auxAnterior;
+        } 
     }
 
     /*public void recorrerInvertido() {

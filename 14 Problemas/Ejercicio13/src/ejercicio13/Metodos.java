@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ejercicio10;
+package ejercicio13;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -26,7 +26,7 @@ public class Metodos {
     public int menu (){
         System.out.println("\nInsertar            [1]: ");
         System.out.println("Recorrer            [2]: ");
-        System.out.println("Ordenar             [3]: ");
+        System.out.println("Elimina             [3]: ");
         System.out.println("Salir               [0]:");
         return entrada.nextInt();         
     }
@@ -65,30 +65,29 @@ public class Metodos {
         }        
     }
 
-    public void ordenar() {
+    public void eliminar() {
         Nodo actual = head;
-        Nodo puntero = head.sig;
         
-        if (listaVacia()) {
-            System.err.println("Lista vacía");
-            return;
-        }
-        Nodo auxCom, auxPeque;
-        int temp;
-
-        for (auxCom = head; auxCom.sig != null; auxCom = auxCom.sig) {
-            Nodo min = auxCom;
-            for (auxPeque = auxCom.sig; auxPeque != null; auxPeque = auxPeque.sig) {
-                if (auxPeque.dato < min.dato) {
-                    min = auxPeque;
-                } 
+        while (actual.sig!=null) {
+            if (numRepetido(actual.dato)) {
+                if (actual == head) {
+                    head = head.sig;
+                } else {
+                    actual.sig = actual.sig.sig;
+                }
             }
-            if (min != auxCom) {
-                temp = auxCom.dato;
-                auxCom.dato = min.dato;
-                min.dato = temp;
-            }
+            actual = actual.sig;
         }
+    }
+    
+    public boolean numRepetido(int num) {
+        Nodo actual = head;
+        while (actual!=null) {
+            if (num==actual.dato) 
+                return true;
+            actual = actual.sig;
+        }
+        return false;
     }
 
     /*public double promedio() {
