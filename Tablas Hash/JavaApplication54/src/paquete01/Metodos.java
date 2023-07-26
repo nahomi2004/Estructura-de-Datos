@@ -32,7 +32,7 @@ public class Metodos {
 
     public int sumarCaracteres(String texto) {
 
-        char[] caracteres = texto.toCharArray();
+        //char[] caracteres = texto.toCharArray();
         int suma = 0;
 
         for (int i = 0; i < texto.length(); i++) {

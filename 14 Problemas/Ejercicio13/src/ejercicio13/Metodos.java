@@ -23,14 +23,14 @@ public class Metodos {
         this.cont = 0;
     }
 
-    public int menu (){
+    public int menu() {
         System.out.println("\nInsertar            [1]: ");
         System.out.println("Recorrer            [2]: ");
         System.out.println("Elimina             [3]: ");
         System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
+        return entrada.nextInt();
     }
-    
+
     public boolean listaVacia() {
         return (head == null);
     }
@@ -62,34 +62,121 @@ public class Metodos {
                 System.out.print(actual.dato + " -> ");
                 actual = actual.sig;
             }
-        }        
+        }
     }
 
     public void eliminar() {
         Nodo actual = head;
-        
-        while (actual.sig!=null) {
-            if (numRepetido(actual.dato)) {
-                if (actual == head) {
-                    head = head.sig;
-                } else {
-                    actual.sig = actual.sig.sig;
+        Nodo previo = null;
+
+        while (actual != null) {
+            Nodo siguiente = actual.sig;
+            Nodo compa = null;
+
+            while (siguiente != null && siguiente.dato != actual.dato) {
+                compa = siguiente;
+                siguiente = siguiente.sig;
+            }
+            
+            if (siguiente != null && siguiente.dato == actual.dato) {
+                if (previo == null)
+                    head = actual.sig;
+                else {
+                    previo.sig = actual.sig;
+                    compa.sig = siguiente.sig;
                 }
             }
-            actual = actual.sig;
+            previo = actual;
+            actual = siguiente;
         }
-    }
-    
-    public boolean numRepetido(int num) {
-        Nodo actual = head;
-        while (actual!=null) {
-            if (num==actual.dato) 
-                return true;
-            actual = actual.sig;
-        }
-        return false;
     }
 
+    /*
+    Nodo actual = head;
+        Nodo previo = null;
+
+        while (actual != null) {
+            Nodo siguiente = actual.sig;
+            Nodo compa = null;
+            Nodo anterior = null;
+            boolean repetido = false;
+
+            while (siguiente != null && siguiente.dato == actual.dato) {
+                repetido = true;
+                if (compa == null) {
+                    compa = siguiente;
+                } else {
+                    anterior = compa;
+                    compa = siguiente;
+                }
+                siguiente = siguiente.sig;
+            }
+
+            if (repetido) {
+                if (previo == null) {
+                    head = siguiente;
+                } else {
+                    previo.sig = siguiente;
+                }
+
+                if (anterior != null) {
+                    anterior.sig = siguiente;
+                }
+            } else {
+                previo = actual;
+            }
+
+            actual = siguiente;
+        }
+    
+    Nodo actual = head;
+        Nodo previo = null;
+
+        while (actual != null) {
+            Nodo siguiente = actual.sig;
+            Nodo compa = null;
+            boolean repetido = false;
+
+            while (siguiente != null && siguiente.dato != actual.dato) {
+                compa = siguiente;
+                siguiente = siguiente.sig;
+            }
+            
+            if (siguiente != null && siguiente.dato == actual.dato) {
+            repetido = true;
+                if (previo == null)
+                    head = actual.sig;
+                else {
+                    previo.sig = actual.sig;
+                    compa.sig = siguiente.sig;
+                }
+            }
+            
+            
+            previo = actual;
+            actual = siguiente;
+        }
+    
+    Nodo siguiente = actual.sig;
+            boolean repetido = false;
+
+            while (siguiente != null && siguiente.dato == actual.dato) {
+                repetido = true;
+                siguiente = siguiente.sig;
+            }
+
+            if (repetido) {
+                if (previo == null) {
+                    head = siguiente;
+                } else {
+                    previo.sig = siguiente;
+                }
+            } else {
+                previo = actual;
+            }
+
+            actual = siguiente;
+    */
     /*public double promedio() {
         double promedio=0;
         Nodo actual = head;
