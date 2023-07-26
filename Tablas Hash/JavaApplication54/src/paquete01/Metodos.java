@@ -12,13 +12,11 @@ import java.util.Scanner;
  * @author SALA H
  */
 public class Metodos {
-
-    Nodo head;
+    
     Scanner entrada;
     Nodo[] lista;
 
     public Metodos() {
-        this.head = null;
         this.entrada = new Scanner(System.in);
         this.lista = new Nodo[10];
     }
@@ -31,7 +29,6 @@ public class Metodos {
     }
 
     public int sumarCaracteres(String texto) {
-
         //char[] caracteres = texto.toCharArray();
         int suma = 0;
 
