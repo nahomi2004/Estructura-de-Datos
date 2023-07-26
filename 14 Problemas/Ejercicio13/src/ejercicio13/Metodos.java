@@ -70,28 +70,70 @@ public class Metodos {
         Nodo previo = null;
 
         while (actual != null) {
+            int datoActual = actual.dato;
             Nodo siguiente = actual.sig;
-            Nodo compa = null;
+            boolean repetido = false;
 
-            while (siguiente != null && siguiente.dato != actual.dato) {
-                compa = siguiente;
+            while (siguiente != null && siguiente.dato == datoActual) {
+                repetido = true;
                 siguiente = siguiente.sig;
             }
-            
-            if (siguiente != null && siguiente.dato == actual.dato) {
-                if (previo == null)
-                    head = actual.sig;
-                else {
-                    previo.sig = actual.sig;
-                    compa.sig = siguiente.sig;
+
+            if (repetido) {
+                if (previo == null) {
+                    // Si el nodo repetido es la cabeza de la lista
+                    head = siguiente;
+                } else {
+                    // Si el nodo repetido no es la cabeza de la lista
+                    previo.sig = siguiente;
                 }
+            } else {
+                previo = actual;
             }
-            previo = actual;
+
             actual = siguiente;
         }
     }
 
     /*
+    public void eliminar() {
+        Nodo actual = head;
+
+        while (actual != null) {
+            int datoRepetido = -1;
+            Nodo siguiente = actual.sig;
+
+            while (siguiente != null) {
+                if (siguiente.dato == actual.dato) {
+                    datoRepetido = siguiente.dato;
+                    actual.sig = siguiente.sig;
+                }
+                siguiente = siguiente.sig;
+            }
+
+            actual = actual.sig;
+
+            // Eliminar todos los nodos con el valor datoRepetido
+            Nodo previo = null;
+            Nodo temp = head;
+
+            while (temp != null) {
+                if (temp.dato == datoRepetido) {
+                    if (previo == null) {
+                        head = temp.sig;
+                        temp = head;
+                    } else {
+                        previo.sig = temp.sig;
+                        temp = temp.sig;
+                    }
+                } else {
+                    previo = temp;
+                    temp = temp.sig;
+                }
+            }
+        }
+     */
+ /*
     Nodo actual = head;
         Nodo previo = null;
 
@@ -176,8 +218,8 @@ public class Metodos {
             }
 
             actual = siguiente;
-    */
-    /*public double promedio() {
+     */
+ /*public double promedio() {
         double promedio=0;
         Nodo actual = head;
         while (actual != null) {
