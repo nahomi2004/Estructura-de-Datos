@@ -94,6 +94,9 @@ public class Metodos {
             actual = siguiente;
         }
     }
+}
+
+
 
     /*
     public void eliminar() {
@@ -300,4 +303,3 @@ public class Metodos {
             }
         }
     }*/
-}

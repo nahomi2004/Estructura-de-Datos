@@ -28,10 +28,10 @@ public class Metodos {
     }
 
     public int menu() {
-        System.out.println("\nInsertar                                       [1]: ");
-        System.out.println("Recorrer                                       [2]: ");
-        System.out.println("Eliminar a partir de la posición del nodo dado [3]: ");
-        System.out.println("Salir                                          [0]:");
+        System.out.println("\nInsertar         [1]: ");
+        System.out.println("Recorrer         [2]: ");
+        System.out.println("Crear dos listas [3]: ");
+        System.out.println("Salir            [0]:");
         return entrada.nextInt();
     }
 
@@ -89,6 +89,9 @@ public class Metodos {
             actual1.sig = null;
         }
     }
+}
+
+
 
     /*public void ordenar() {
         Nodo actual = head;
@@ -197,4 +200,3 @@ public class Metodos {
             }
         }
     }*/
-}

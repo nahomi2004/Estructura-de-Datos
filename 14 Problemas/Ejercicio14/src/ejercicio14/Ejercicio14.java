@@ -22,7 +22,7 @@ public class Ejercicio14 {
                 case 1 -> {
                     System.out.print("Ingrese un numero: ");
                     num = myArbol.entrada.nextInt();
-                    myArbol.raiz=myArbol.insertar(num, myArbol.raiz);
+                    myArbol.raiz = myArbol.insertar(num, myArbol.raiz);
                 }
                 case 2 -> {
                     System.out.println("InOrden:");
@@ -33,10 +33,10 @@ public class Ejercicio14 {
                     System.out.println("La altura del árbol es: " + myArbol.alturaArbol(myArbol.raiz));
                 }
                 default -> {
-                        
+
                 }
             }
-        } while (op!=0);
+        } while (op != 0);
     }
-    
+
 }

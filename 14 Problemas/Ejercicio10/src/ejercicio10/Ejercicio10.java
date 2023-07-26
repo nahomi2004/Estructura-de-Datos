@@ -15,14 +15,15 @@ public class Ejercicio10 {
         Diseñar un algoritmo que permita ordenar una lista lineal sencilla 
         utilizando el método burbuja.
         */
-        
+
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer();
                     System.out.println("null");
@@ -33,6 +34,6 @@ public class Ejercicio10 {
                     System.out.println("null");
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }

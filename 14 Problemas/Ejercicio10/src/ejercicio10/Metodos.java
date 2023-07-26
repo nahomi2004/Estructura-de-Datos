@@ -23,14 +23,14 @@ public class Metodos {
         this.cont = 0;
     }
 
-    public int menu (){
+    public int menu() {
         System.out.println("\nInsertar            [1]: ");
         System.out.println("Recorrer            [2]: ");
         System.out.println("Ordenar             [3]: ");
         System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
+        return entrada.nextInt();
     }
-    
+
     public boolean listaVacia() {
         return (head == null);
     }
@@ -62,13 +62,13 @@ public class Metodos {
                 System.out.print(actual.dato + " -> ");
                 actual = actual.sig;
             }
-        }        
+        }
     }
 
     public void ordenar() {
         Nodo actual = head;
         Nodo puntero = head.sig;
-        
+
         if (listaVacia()) {
             System.err.println("Lista vacía");
             return;
@@ -81,7 +81,7 @@ public class Metodos {
             for (auxPeque = auxCom.sig; auxPeque != null; auxPeque = auxPeque.sig) {
                 if (auxPeque.dato < min.dato) {
                     min = auxPeque;
-                } 
+                }
             }
             if (min != auxCom) {
                 temp = auxCom.dato;
@@ -90,6 +90,9 @@ public class Metodos {
             }
         }
     }
+}
+
+
 
     /*public double promedio() {
         double promedio=0;
@@ -172,4 +175,3 @@ public class Metodos {
             }
         }
     }*/
-}

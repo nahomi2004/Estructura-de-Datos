@@ -69,10 +69,10 @@ public class Metodos {
     public void eliminar() {
         System.out.println("Ingrese la posición:");
         int pos = entrada.nextInt();
-        
+
         int c = 0;
-        
-        if (pos>cont) {
+
+        if (pos > cont) {
             System.out.println("No hay como eliminar porque esa posición no existe");
             return;
         }
@@ -86,7 +86,7 @@ public class Metodos {
                 actual = actual.sig;
                 c++;
             }
-            
+
             if (c == 0) {
                 head.sig = null;
                 head = null;
@@ -95,10 +95,12 @@ public class Metodos {
                 actual.sig = null;
                 actual = null;
             }
-            
+
             System.out.println("Nodo eliminados correctamente :D");
         }
     }
+}
+
 
     /*public void ordenar() {
         Nodo actual = head;
@@ -207,4 +209,3 @@ public class Metodos {
             }
         }
     }*/
-}

@@ -18,13 +18,15 @@ public class Ejercicio11 {
         Diseñar un algoritmo que permita eliminar n número de nodos a partir 
         de la posición x en una lista sencilla lineal.
         */
+        
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer();
                     System.out.println("null");
@@ -33,6 +35,6 @@ public class Ejercicio11 {
                     m.eliminar();
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }

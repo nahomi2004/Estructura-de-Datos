@@ -9,16 +9,16 @@ package ejercicio14;
  * @author SALA H
  */
 public class Nodo {
+
     int dato;
     Nodo izq;
     Nodo der;
-    //Nodo ant;
-    
-    public Nodo (int d){
-        this.dato=d;
-        this.izq=null;        
-        this.der=null;        
-    } 
+
+    public Nodo(int d) {
+        this.dato = d;
+        this.izq = null;
+        this.der = null;
+    }
 
     public int getDato() {
         return dato;

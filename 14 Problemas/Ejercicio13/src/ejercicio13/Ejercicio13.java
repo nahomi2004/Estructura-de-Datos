@@ -17,15 +17,16 @@ public class Ejercicio13 {
         /*
         Diseñar un algoritmo que permita eliminar todos los elementos repetidos 
         en una lista lineal sencilla.
-        */
-        
+         */
+
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer();
                     System.out.println("null");
@@ -34,7 +35,7 @@ public class Ejercicio13 {
                     m.eliminar();
                 }
             }
-        } while (op!=0);
+        } while (op != 0);
     }
-    
+
 }

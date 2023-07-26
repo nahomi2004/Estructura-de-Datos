@@ -16,6 +16,7 @@ public class Ejercicio12 {
     public static void main(String[] args) {
         int op, num;
         Metodos myArbol = new Metodos();
+        
         do {
             op = myArbol.menu();
             switch (op) {
@@ -35,9 +36,9 @@ public class Ejercicio12 {
                     System.out.println("null");
                 }
                 default -> {
-                        
+
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }
