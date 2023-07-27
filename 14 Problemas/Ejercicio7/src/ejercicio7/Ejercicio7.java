@@ -11,19 +11,20 @@ package ejercicio7;
 public class Ejercicio7 {
 
     public static void main(String[] args) {
-        /*
-        Escribe una función, que devuelve 1 si una lista dada está ordenada 
-        ascendentemente de principio a final, 2 si está ordenada 
-        descendentemente, o 0 si no está ordenada de ninguna forma.
-        */
-        
+/*
+    Escribe una función, que devuelve 1 si una lista dada está ordenada 
+    ascendentemente de principio a final, 2 si está ordenada 
+    descendentemente, o 0 si no está ordenada de ninguna forma.
+*/
+
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer();
                     System.out.println("null");
@@ -39,6 +40,6 @@ public class Ejercicio7 {
                     }
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }

@@ -27,15 +27,6 @@ public class Metodos {
         this.cont = 1;
     }
 
-    /*public int menu (){
-        System.out.println("\nInsertar            [1]: ");
-        System.out.println("Recorrer            [2]: ");
-        System.out.println("Insertar al inicio  [3]: ");
-        System.out.println("Insertar ordenado   [4]: ");
-        System.out.println("Eliminar            [5]: ");
-        System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
-    }*/
     public boolean listaVacia() {
         return (head == null);
     }
@@ -65,20 +56,6 @@ public class Metodos {
         }
     }
 
-    /*
-    public void recorrer(Nodo aux) {
-        Nodo actual = aux;
-        if (listaVacia()) {
-            System.err.println("Lista vacía");
-        } else {
-            while (actual != null) {
-                System.out.print(actual.dato + " -> ");
-                actual = actual.sig;
-            }
-        }        
-    }
-    */
-    
     public double promedio() {
         double promedio = 0;
         Nodo actual = head;
@@ -88,8 +65,9 @@ public class Metodos {
         }
         return promedio / cont;
     }
+}
 
-    /*public void insInicio() {
+/*public void insInicio() {
         int num;
         System.out.print("Ingrese dato: ");
         num = entrada.nextInt();
@@ -160,4 +138,3 @@ public class Metodos {
             }
         }
     }*/
-}

@@ -11,10 +11,10 @@ package ejercicio10;
 public class Ejercicio10 {
 
     public static void main(String[] args) {
-        /*
-        Diseñar un algoritmo que permita ordenar una lista lineal sencilla 
-        utilizando el método burbuja.
-        */
+/*
+    Diseñar un algoritmo que permita ordenar una lista lineal sencilla 
+    utilizando el método burbuja.
+*/
 
         Metodos m = new Metodos();
         int op;

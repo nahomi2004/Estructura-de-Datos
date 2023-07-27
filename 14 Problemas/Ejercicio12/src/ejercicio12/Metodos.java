@@ -91,9 +91,7 @@ public class Metodos {
     }
 }
 
-
-
-    /*public void ordenar() {
+/*public void ordenar() {
         Nodo actual = head;
         Nodo puntero = head.sig;
         

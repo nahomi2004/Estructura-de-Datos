@@ -60,60 +60,7 @@ public class Metodos {
             actual = actual.sig;
         }
     }
-    
-    /*
-    public void recorrer(Nodo aux) {
-        Nodo actual = aux;
-        if (listaVacia()) {
-            System.err.println("Lista vacía");
-        } else {
-            while (actual != null) {
-                System.out.print(actual.dato + " -> ");
-                actual = actual.sig;
-            }
-        }        
-    }
-    */
 
-    /*public void insInicio() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        Nodo nuevo = new Nodo(num);
-        if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
-        } else {
-            nuevo.sig = head;
-            head = nuevo;
-        }
-    }
-    
-    public void insOrdenado() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        Nodo nuevo = new Nodo(num);
-        if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
-        } else {
-            if (num<head.dato) {
-                nuevo.sig = head;
-                head = nuevo;
-            } else {
-                Nodo actual = head;
-                while (actual.sig!=null && num>actual.sig.dato) {
-                    actual = actual.sig;
-                    nuevo.sig = actual.sig;
-                    actual.sig = nuevo;
-                    if (nuevo.sig==null) {
-                        tail = nuevo;
-                    }
-                }
-            }
-        }
-    }*/
     public int buscarMayor() {
         Nodo actual = head;
         int aux = actual.dato;
@@ -159,3 +106,57 @@ public class Metodos {
         System.out.println("Eliminado correctamente");
     }
 }
+
+/*
+    public void recorrer(Nodo aux) {
+        Nodo actual = aux;
+        if (listaVacia()) {
+            System.err.println("Lista vacía");
+        } else {
+            while (actual != null) {
+                System.out.print(actual.dato + " -> ");
+                actual = actual.sig;
+            }
+        }        
+    }
+ */
+
+    /*public void insInicio() {
+        int num;
+        System.out.print("Ingrese dato: ");
+        num = entrada.nextInt();
+        Nodo nuevo = new Nodo(num);
+        if (listaVacia()) {
+            head = nuevo;
+            tail = nuevo;
+        } else {
+            nuevo.sig = head;
+            head = nuevo;
+        }
+    }
+    
+    public void insOrdenado() {
+        int num;
+        System.out.print("Ingrese dato: ");
+        num = entrada.nextInt();
+        Nodo nuevo = new Nodo(num);
+        if (listaVacia()) {
+            head = nuevo;
+            tail = nuevo;
+        } else {
+            if (num<head.dato) {
+                nuevo.sig = head;
+                head = nuevo;
+            } else {
+                Nodo actual = head;
+                while (actual.sig!=null && num>actual.sig.dato) {
+                    actual = actual.sig;
+                    nuevo.sig = actual.sig;
+                    actual.sig = nuevo;
+                    if (nuevo.sig==null) {
+                        tail = nuevo;
+                    }
+                }
+            }
+        }
+    }*/

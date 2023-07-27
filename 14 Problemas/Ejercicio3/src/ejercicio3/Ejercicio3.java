@@ -11,10 +11,10 @@ package ejercicio3;
 public class Ejercicio3 {
 
     public static void main(String[] args) {
-        /*
-        Implemente una función que para una lista dada, elimine el nodo que 
-        tenga el valor mayor.
-        */
+/*
+    Implemente una función que para una lista dada, elimine el nodo que 
+    tenga el valor mayor.
+*/
 
         int op;
         Metodos mylista = new Metodos();

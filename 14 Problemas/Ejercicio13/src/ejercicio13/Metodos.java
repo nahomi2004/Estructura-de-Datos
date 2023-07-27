@@ -96,9 +96,7 @@ public class Metodos {
     }
 }
 
-
-
-    /*
+/*
     public void eliminar() {
         Nodo actual = head;
 
@@ -135,7 +133,7 @@ public class Metodos {
                 }
             }
         }
-     */
+ */
  /*
     Nodo actual = head;
         Nodo previo = null;
@@ -221,7 +219,7 @@ public class Metodos {
             }
 
             actual = siguiente;
-     */
+ */
  /*public double promedio() {
         double promedio=0;
         Nodo actual = head;

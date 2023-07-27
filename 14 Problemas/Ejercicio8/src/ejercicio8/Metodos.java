@@ -26,14 +26,14 @@ public class Metodos {
         this.cont = 0;
     }
 
-    public int menu (){
+    public int menu() {
         System.out.println("\nInsertar            [1]: ");
         System.out.println("Recorrer            [2]: ");
         System.out.println("Recorrer lista dos  [3]: ");
         System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
+        return entrada.nextInt();
     }
-    
+
     public boolean listaVacia(Nodo aux) {
         return (aux == null);
     }
@@ -63,7 +63,7 @@ public class Metodos {
             actual = actual.sig;
         }
     }
-    
+
     public void recorrer(Nodo aux, int limite) {
         Nodo actual = aux;
         while (actual != null) {
@@ -73,8 +73,8 @@ public class Metodos {
             actual = actual.sig;
         }
     }
-    
+
     public boolean numMayor(int num, int dato) {
-        return (num>dato);
+        return (num > dato);
     }
 }

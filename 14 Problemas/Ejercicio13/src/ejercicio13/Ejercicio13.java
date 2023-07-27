@@ -14,10 +14,10 @@ public class Ejercicio13 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*
-        Diseñar un algoritmo que permita eliminar todos los elementos repetidos 
-        en una lista lineal sencilla.
-         */
+/*
+    Diseñar un algoritmo que permita eliminar todos los elementos repetidos 
+    en una lista lineal sencilla.
+ */
 
         Metodos m = new Metodos();
         int op;

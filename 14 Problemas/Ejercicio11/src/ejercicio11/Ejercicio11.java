@@ -14,10 +14,10 @@ public class Ejercicio11 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*
-        Diseñar un algoritmo que permita eliminar n número de nodos a partir 
-        de la posición x en una lista sencilla lineal.
-        */
+/*
+    Diseñar un algoritmo que permita eliminar n número de nodos a partir 
+    de la posición x en una lista sencilla lineal.
+*/
         
         Metodos m = new Metodos();
         int op;

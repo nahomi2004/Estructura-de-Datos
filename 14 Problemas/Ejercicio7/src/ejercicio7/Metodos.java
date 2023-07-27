@@ -15,26 +15,22 @@ public class Metodos {
 
     Nodo head;
     Nodo tail;
-    int cont;
     Scanner entrada;
-    int lim;
 
     public Metodos() {
         this.head = null;
         this.tail = null;
         this.entrada = new Scanner(System.in);
-        this.lim = 20;
-        this.cont = 0;
     }
 
-    public int menu (){
+    public int menu() {
         System.out.println("\nInsertar            [1]: ");
         System.out.println("Recorrer            [2]: ");
         System.out.println("Comprobar           [3]: ");
         System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
+        return entrada.nextInt();
     }
-    
+
     public boolean listaVacia() {
         return (head == null);
     }
@@ -71,41 +67,42 @@ public class Metodos {
                 System.out.print(actual.dato + " -> ");
                 actual = actual.sig;
             }
-        }        
+        }
     }
-    
+
     public boolean ascendente() {
         Nodo actual = head;
         while (actual.sig != null) {
-            if (actual.dato>actual.sig.dato) {
+            if (actual.dato > actual.sig.dato) {
                 return false;
             }
             actual = actual.sig;
         }
         return true;
     }
-    
+
     public boolean descendente() {
         Nodo actual = head;
         while (actual.sig != null) {
-            if (actual.dato<actual.sig.dato) {
+            if (actual.dato < actual.sig.dato) {
                 return false;
             }
             actual = actual.sig;
         }
         return true;
     }
-    
+
     public int comprobar() {
         if (ascendente()) {
             return 1;
         } else if (descendente()) {
             return 2;
-        } 
+        }
         return 0;
     }
+}
 
-    /*public void recorrerInvertido() {
+/*public void recorrerInvertido() {
         Nodo actual = tail;
         if (listaVacia()) {
             System.err.println("Lista vacía");
@@ -117,7 +114,7 @@ public class Metodos {
         }  
     }*/
 
-    /*public double promedio() {
+ /*public double promedio() {
         double promedio=0;
         Nodo actual = head;
         while (actual != null) {
@@ -198,4 +195,3 @@ public class Metodos {
             }
         }
     }*/
-}

@@ -11,18 +11,19 @@ package ejercicio6;
 public class Ejercicio6 {
 
     public static void main(String[] args) {
-        /*
-        Diseñar un algoritmo que permita desplegar el contenido de los nodos de 
-        una lista lineal sencilla de forma invertida.
-        */
-        
+/*
+    Diseñar un algoritmo que permita desplegar el contenido de los nodos de 
+    una lista lineal sencilla de forma invertida.
+*/
+
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer();
                     System.out.println("null");
@@ -32,6 +33,6 @@ public class Ejercicio6 {
                     System.out.println("null");
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }

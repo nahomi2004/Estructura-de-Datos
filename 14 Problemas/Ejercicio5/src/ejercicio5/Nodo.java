@@ -9,13 +9,14 @@ package ejercicio5;
  * @author SALA H
  */
 public class Nodo {
+
     int dato;
     Nodo sig;
-    
-    public Nodo (int d){
-        this.dato=d;
-        this.sig=null;       
-       } 
+
+    public Nodo(int d) {
+        this.dato = d;
+        this.sig = null;
+    }
 
     public int getDato() {
         return dato;

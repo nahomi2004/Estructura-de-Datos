@@ -11,12 +11,12 @@ package ejercicio4;
 public class Ejercicio4 {
 
     public static void main(String[] args) {
-        /*
-        Escribe una función que, dadas dos listas ordenadas de menor a mayor, 
-        devuelva otra lista con todos los elementos de las dos listas 
-        originales y ordenada también de menor a mayor (no incluir
-        elementos repetidos).
-         */
+/*
+    Escribe una función que, dadas dos listas ordenadas de menor a mayor, 
+    devuelva otra lista con todos los elementos de las dos listas 
+    originales y ordenada también de menor a mayor (no incluir
+    elementos repetidos).
+ */
         int op;
         Metodos mylista = new Metodos();
         mylista.menu();

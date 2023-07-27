@@ -23,14 +23,14 @@ public class Metodos {
         this.entrada = new Scanner(System.in);
     }
 
-    public int menu (){
+    public int menu() {
         System.out.println("\nInsertar            [1]: ");
         System.out.println("Recorrer            [2]: ");
         System.out.println("Recorrer invertido  [3]: ");
         System.out.println("Salir               [0]:");
-        return entrada.nextInt();         
+        return entrada.nextInt();
     }
-    
+
     public boolean listaVacia() {
         return (head == null);
     }
@@ -49,7 +49,7 @@ public class Metodos {
             while (actual.sig != null) {
                 actual = actual.sig;
             }
-                        
+
             actual.sig = nuevo;
             nuevo.ant = actual;
             actual = nuevo;
@@ -68,11 +68,11 @@ public class Metodos {
                 System.out.print(actual.dato + " -> ");
                 actual = actual.sig;
             }
-        }        
+        }
     }
-    
+
     public void listaInvertida() {
-        
+
         if (listaVacia()) {
             System.err.println("Lista vacía");
         } else {
@@ -81,46 +81,13 @@ public class Metodos {
             Nodo auxSiguiente;
 
             while (actual != null) {
-                auxSiguiente = actual.sig;  
-                actual.sig = auxAnterior;   
-                auxAnterior = actual;       
-                actual = auxSiguiente;      
+                auxSiguiente = actual.sig;
+                actual.sig = auxAnterior;
+                auxAnterior = actual;
+                actual = auxSiguiente;
             }
             tail = head;
             head = auxAnterior;
-        } 
+        }
     }
-
-    /*public void recorrerInvertido() {
-        Nodo actual = tail;
-        if (listaVacia()) {
-            System.err.println("Lista vacía");
-        } else {
-            while (actual != null) {
-                System.out.print(actual.dato + " -> ");
-                actual = actual.ant;
-            }
-        }  
-    }
-    
-    if (listaVacia()) {
-            System.err.println("Lista vacía");
-        } else {
-            while (actual != null) {
-                if (head.sig==tail){
-                    int aux = tail.dato;
-                    tail.dato = head.dato;
-                    head.dato = aux;
-                    actual = null;
-                } else {
-                    Nodo aux = tail;
-                    tail = head;
-                    head = aux;
-                
-                    actual.sig = actual.ant;
-                    actual = actual.ant;
-                }
-            }
-        }  
-    */    
 }

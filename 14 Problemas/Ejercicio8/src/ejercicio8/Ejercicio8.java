@@ -11,18 +11,19 @@ package ejercicio8;
 public class Ejercicio8 {
 
     public static void main(String[] args) {
-        /*
-        Implemente una función que suprima de la lista todos los elementos 
-        mayores que un número dado como límite. Por ejemplo, si la lista 
-        inicial es
-        */
+/*
+    Implemente una función que suprima de la lista todos los elementos 
+    mayores que un número dado como límite. Por ejemplo, si la lista 
+    inicial es
+*/
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer(m.head);
                     System.out.println("null");
@@ -37,6 +38,6 @@ public class Ejercicio8 {
                     System.out.println("null");
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }

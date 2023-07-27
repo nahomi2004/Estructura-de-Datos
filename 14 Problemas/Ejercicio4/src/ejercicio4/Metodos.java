@@ -14,13 +14,11 @@ public class Metodos {
 
     Nodo head;
     Nodo head2;
-    Nodo head3;
     Scanner entrada;
 
     public Metodos() {
         this.head = null;
         this.head2 = null;
-        this.head3 = null;
         this.entrada = new Scanner(System.in);
     }
 
@@ -38,22 +36,6 @@ public class Metodos {
         return (head == null);
     }
 
-    /*public void insertar(){
-       int num;
-        System.out.print("Ingrese dato: ");
-        num=entrada.nextInt();
-        Nodo nuevo=new Nodo(num);
-        if(listaVacia())
-            head=nuevo;
-        else{
-            Nodo actual=head;
-            
-            while(actual.sig!=null){
-                 actual=actual.sig;
-            }
-            actual.sig=nuevo;
-        }
-    }*/
     public void recorrer(Nodo aux) {
         Nodo actual = aux;
         while (actual != null) {
@@ -61,34 +43,7 @@ public class Metodos {
             actual = actual.sig;
         }
     }
-    
-    /*
-    public void recorrer(Nodo aux) {
-        Nodo actual = aux;
-        if (listaVacia()) {
-            System.err.println("Lista vacía");
-        } else {
-            while (actual != null) {
-                System.out.print(actual.dato + " -> ");
-                actual = actual.sig;
-            }
-        }        
-    }
-    */
 
-    /*public void insInicio() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        Nodo nuevo = new Nodo(num);
-        if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
-        } else {
-            nuevo.sig = head;
-            head = nuevo;
-        }
-    }*/
     public void insOrdenado(Nodo aux) {
         int num;
         System.out.print("Ingrese dato: ");
@@ -121,36 +76,4 @@ public class Metodos {
             }
         }
     }
-
-    /*public void eliminar() {
-        int num;
-        System.out.print("Ingrese dato: ");
-        num = entrada.nextInt();
-        Nodo nuevo = new Nodo(num);
-        if (listaVacia()) {
-            head = nuevo;
-            tail = nuevo;
-        } else {
-            if (num==head.dato) {
-                if (head.sig==null) {
-                    tail=null;
-                }
-                head=head.sig;
-            } else {
-                Nodo actual = head;
-                while (actual.sig!=null && actual.sig.dato!=num) {
-                    actual=actual.sig;
-                }
-                if (actual.sig==tail) {
-                    tail = actual;
-                }
-                if (actual.sig!=null) {
-                    actual.sig = actual.sig.sig;
-                } else {
-                    System.out.println("No está :("); 
-                }
-                
-            }
-        }
-    }*/
 }

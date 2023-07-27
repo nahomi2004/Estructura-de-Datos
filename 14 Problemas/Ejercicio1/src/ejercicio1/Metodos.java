@@ -22,16 +22,6 @@ public class Metodos {
         this.entrada = new Scanner(System.in);
     }
 
-    /* public int menu() {
-        System.out.println("\nInsertar            [1]: ");
-        System.out.println("Recorrer            [2]: ");
-        System.out.println("Insertar al inicio  [3]: ");
-        System.out.println("Insertar ordenado   [4]: ");
-        System.out.println("Eliminar            [5]: ");
-        System.out.println("Salir               [0]:");
-        return entrada.nextInt();
-    } */
-
     public boolean listaVacia() {
         return (head == null);
     }
@@ -60,7 +50,7 @@ public class Metodos {
             actual = actual.sig;
         }
     }
-    
+
     public void insertarNum(int num, int num2) {
         Nodo actual = head;
         while (actual != null) {
@@ -78,10 +68,7 @@ public class Metodos {
     }
 }
 
-
-
-
-    /*public void insInicio() {
+/*public void insInicio() {
         int num;
         System.out.print("Ingrese dato: ");
         num = entrada.nextInt();

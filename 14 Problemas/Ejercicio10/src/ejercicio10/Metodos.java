@@ -92,9 +92,7 @@ public class Metodos {
     }
 }
 
-
-
-    /*public double promedio() {
+/*public double promedio() {
         double promedio=0;
         Nodo actual = head;
         while (actual != null) {

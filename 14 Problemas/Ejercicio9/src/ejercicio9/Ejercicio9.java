@@ -11,18 +11,19 @@ package ejercicio9;
 public class Ejercicio9 {
 
     public static void main(String[] args) {
-        /*
-        Diseñar un algoritmo que permita invertir los nodos de una lista lineal 
-        sencilla.
-        */
-        
+/*
+    Diseñar un algoritmo que permita invertir los nodos de una lista lineal 
+    sencilla.
+*/
+
         Metodos m = new Metodos();
         int op;
-        
+
         do {
             op = m.menu();
             switch (op) {
-                case 1 -> m.insertar();
+                case 1 ->
+                    m.insertar();
                 case 2 -> {
                     m.recorrer(m.head);
                     System.out.println("null");
@@ -33,6 +34,6 @@ public class Ejercicio9 {
                     System.out.println("null");
                 }
             }
-        } while (op!=0);
-    }    
+        } while (op != 0);
+    }
 }

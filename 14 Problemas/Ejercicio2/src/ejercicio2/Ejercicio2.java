@@ -11,10 +11,10 @@ package ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        /*
-        Crear una función que permita calcular el promedio de los elementos de 
-        una lista ya creada.
-        */
+/*
+    Crear una función que permita calcular el promedio de los elementos de 
+    una lista ya creada.
+*/
         Metodos opc = new Metodos();
 
         for (int i = 0; i < 10; i++) {
